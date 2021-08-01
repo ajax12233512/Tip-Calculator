@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Tip calculator app</title>
+  <link rel="stylesheet" href="/style.css">
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="title">
+      <h1>The</h1>
+      <h1>Tip</h1>
+    </div>
+
+    <div class="calculator">
+      <div class="calculator-main">
+          <h3>Bill</h3>
+          <input type="text" placeholder="$">       
+      </div>
+
+      <div class="calculator-selectTip">
+        <h3 class="selectTip">Select Tip %</h3>
+        <button type="submit">5%</button>
+        <button type="submit">10%</button>
+        <button type="submit">15%</button>
+        <button type="submit">20%</button>
+        <button type="submit">50%</button>     
+        <button type="submit">Custom</button>  
+      </div>
+
+      <div class="calculator-people">
+        <h3>Number of People</h3>
+        <input type="text" placeholder="#">
+      </div>
+
+      <div class="result">
+        <div id="tip-amount">
+          <h5>Tip Amount</h5>
+          <p>/ person</p>
+          <h4 id="tip"></h4>  <!--This is Place holder for tip USe Javascript-->
+        </div>
+
+        <div id="tip-total">
+          <h5>Total</h5>
+          <p>Person</p>
+          <h4 id="total"></h4><!--This is Place holder for tip USe Javascript-->
+        </div>
+
+        <div class="reset">
+          <button type="reset">Reset</button>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+<!--
+  Bill
+
+  Select Tip %
+  5%
+  10%
+  15%
+  25%
+  50%
+  Custom
+
+  Number of People
+
+  Tip Amount
+  / person
+
+  Total
+  / person
+
+  Reset
+  -->
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Neil Juanillo</a>.
+  </div>
+</body>
+</html>
