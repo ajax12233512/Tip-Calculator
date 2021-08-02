@@ -25,41 +25,51 @@
     </div>
 
     <div class="calculator">
-      <div class="calculator-main">
+      <div class="calculator-main greytext">
+        <form action="">
           <h3>Bill</h3>
-          <input type="text" placeholder="$">       
+          <input id="bill" type="number" placeholder="$">       
+        </form>
       </div>
 
       <div class="calculator-selectTip">
-        <h3 class="selectTip">Select Tip %</h3>
-        <button type="submit">5%</button>
-        <button type="submit">10%</button>
-        <button type="submit">15%</button>
-        <button type="submit">20%</button>
-        <button type="submit">50%</button>     
-        <button type="submit">Custom</button>  
+        <h3 class="selectTip greytext">Select Tip %</h3>
+        <button onclick="fivePercent()" id="fivePercent" type="submit">5%</button>
+        <button onclick="tenPercent()" id="tenPercent" type="submit">10%</button>
+        <button onclick="fifteenPercent()" id="fifteenPercent" type="submit">15%</button>
+        <button onclick="twentyPercent()" id="twentyPercent" type="submit">20%</button>
+        <button onclick="fiftyPercent()" id="fiftyPercent" type="submit">50%</button>     
+        <button onclick="customPercent()" id="customPercent" type="submit">Custom</button>  
       </div>
 
       <div class="calculator-people">
-        <h3>Number of People</h3>
-        <input type="text" placeholder="#">
+        <h3 class="greytext">Number of People</h3>
+        <input id="numOfPeople" type="number" placeholder="#">
       </div>
 
       <div class="result">
         <div id="tip-amount">
-          <h5>Tip Amount</h5>
-          <p>/ person</p>
-          <h4 id="tip"></h4>  <!--This is Place holder for tip USe Javascript-->
+          <div class="tip-amount-left">
+            <h5>Tip Amount</h5>
+            <p>/ Person</p>
+          </div>
+          <div class="tip-amount-right">
+            <h4 id="tip"></h4>  <!--This is Place holder for tip USe Javascript-->
+          </div>
         </div>
 
         <div id="tip-total">
-          <h5>Total</h5>
-          <p>Person</p>
-          <h4 id="total"></h4><!--This is Place holder for tip USe Javascript-->
+          <div class="tip-total-left">
+            <h5>Total</h5>
+            <p>/ Person</p>
+          </div>
+          <div class="tip-total-right">
+            <h4 id="total"></h4><!--This is Place holder for tip USe Javascript-->
+          </div>
         </div>
 
         <div class="reset">
-          <button type="reset">Reset</button>
+          <button onclick="reset()" type="reset">Reset</button>
         </div>
 
       </div>
@@ -68,31 +78,10 @@
 
   </div>
 
-
-<!--
-  Bill
-
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
-
-  Number of People
-
-  Tip Amount
-  / person
-
-  Total
-  / person
-
-  Reset
-  -->
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Neil Juanillo</a>.
   </div>
+  <script src="/app.js"></script>
 </body>
 </html>
