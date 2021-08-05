@@ -103,3 +103,28 @@ input{
     display: flex;
     justify-content: space-between;
 }
+
+#toggleCustom{
+    width: 50%;
+    margin: 0 auto;
+}
+
+@media screen and (min-width: 425px){
+    .calculator{
+        display: flex;
+        max-width: 730px;
+        margin: 0 auto;
+        border-radius: 30px;
+    }
+
+    .calculator-left{
+        order: 1;
+        width: 50%;
+    }
+
+    .calculator-right{
+        order: 1;
+        width: 50%;
+        margin: auto 0;
+    }
+}

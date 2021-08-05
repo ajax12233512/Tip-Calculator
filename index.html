@@ -25,54 +25,64 @@
     </div>
 
     <div class="calculator">
-      <div class="calculator-main greytext">
-        <form action="">
-          <h3>Bill</h3>
-          <input id="bill" type="number" placeholder="$">       
-        </form>
-      </div>
 
-      <div class="calculator-selectTip">
-        <h3 class="selectTip greytext">Select Tip %</h3>
-        <button onclick="fivePercent()" id="fivePercent" type="submit">5%</button>
-        <button onclick="tenPercent()" id="tenPercent" type="submit">10%</button>
-        <button onclick="fifteenPercent()" id="fifteenPercent" type="submit">15%</button>
-        <button onclick="twentyPercent()" id="twentyPercent" type="submit">20%</button>
-        <button onclick="fiftyPercent()" id="fiftyPercent" type="submit">50%</button>     
-        <button onclick="customPercent()" id="customPercent" type="submit">Custom</button>  
-      </div>
+      <div class="calculator-left">
 
-      <div class="calculator-people">
-        <h3 class="greytext">Number of People</h3>
-        <input id="numOfPeople" type="number" placeholder="#">
-      </div>
-
-      <div class="result">
-        <div id="tip-amount">
-          <div class="tip-amount-left">
-            <h5>Tip Amount</h5>
-            <p>/ Person</p>
+          <div class="calculator-main greytext">
+            <form action="">
+              <h3>Bill</h3>
+              <input id="bill" type="number" placeholder="$">       
+            </form>
           </div>
-          <div class="tip-amount-right">
-            <h4 id="tip"></h4>  <!--This is Place holder for tip USe Javascript-->
+
+          <div class="calculator-selectTip">
+            <h3 class="selectTip greytext">Select Tip %</h3>
+            <button onclick="fivePercent()" id="fivePercent" type="submit">5%</button>
+            <button onclick="tenPercent()" id="tenPercent" type="submit">10%</button>
+            <button onclick="fifteenPercent()" id="fifteenPercent" type="submit">15%</button>
+            <button onclick="twentyPercent()" id="twentyPercent" type="submit">20%</button>
+            <button onclick="fiftyPercent()" id="fiftyPercent" type="submit">50%</button>     
+            <button onclick="customPercent()" id="customPercent" type="submit">Custom</button>  
           </div>
+
+          <div class="calculator-people">
+            <input type="number" name="" id="toggleCustom" style="display: none;">
+            <h3 class="greytext">Number of People</h3>
+            <input id="numOfPeople" type="number" placeholder="#">
+          </div>
+
+      </div>
+
+      <div class="calculator-right">
+        <div class="result">
+          <div id="tip-amount">
+            <div class="tip-amount-left">
+              <h5>Tip Amount</h5>
+              <p>/ Person</p>
+            </div>
+            <div class="tip-amount-right">
+              <h4 id="tip"></h4>  <!--This is Place holder for tip USe Javascript-->
+            </div>
+          </div>
+
+          <div id="tip-total">
+            <div class="tip-total-left">
+              <h5>Total</h5>
+              <p>/ Person</p>
+            </div>
+            <div class="tip-total-right">
+              <h4 id="total"></h4><!--This is Place holder for tip USe Javascript-->
+            </div>
+          </div>
+
+          <div class="reset">
+            <button onclick="reset()" type="reset">Reset</button>
+          </div>
+
         </div>
-
-        <div id="tip-total">
-          <div class="tip-total-left">
-            <h5>Total</h5>
-            <p>/ Person</p>
-          </div>
-          <div class="tip-total-right">
-            <h4 id="total"></h4><!--This is Place holder for tip USe Javascript-->
-          </div>
-        </div>
-
-        <div class="reset">
-          <button onclick="reset()" type="reset">Reset</button>
-        </div>
-
       </div>
+
+
 
     </div>
 

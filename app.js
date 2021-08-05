@@ -2,6 +2,8 @@ const billElement = document.getElementById('bill');//this shit confusing idk wh
 const totalTipDisplay = document.getElementById('total');//diplayed in .results the total tip
 const numOfPeople = document.getElementById('numOfPeople'); //capture the number of people to divide the tip amongst
 const tipPerPersonDisplay = document.getElementById('tip');//displayed in .results for amount per person
+const toggleCustom = document.getElementById('toggleCustom');
+
 
 function reset(){
     document.getElementById('bill').value = null;
@@ -56,11 +58,29 @@ function fiftyPercent(){
     totalTipDisplay.innerText = '$' + tipPerPerson;
 }
 
-// function customPercent(){
-//     let bill = billElement.value;  
-//     let tipPerPerson = bill * .05;
-//     tipDividedByPeople.innerText = tipPerPerson;
-// }
+function customPercent(){
+    let isToggle;
+    let customValue = toggleCustom.value;
+    toggleCustom.style.display == 'none' ? isToggle = true : isToggle = false;
+
+    if(isToggle == true){
+        toggleCustom.style.display = 'block';
+        console.log('toggle');
+    }
+    else{   
+        toggleCustom.style.display = 'none';
+        console.log('untoggle');
+    }
+    
+    let bill = billElement.value;  
+    let billPerPerson = numOfPeople.value;
+    let tipPerPerson = bill * (customValue*.01);
+    let splitTip = tipPerPerson / billPerPerson;
+    tipPerPersonDisplay.innerText = '$' + splitTip;
+    totalTipDisplay.innerText = '$' + tipPerPerson;
+
+}
+    
 
 
 
